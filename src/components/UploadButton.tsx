@@ -11,13 +11,19 @@ import { useToast } from "@/components/ui/use-toast"
 import { trpc } from "@/app/_trpc/client";
 import { useRouter } from "next/navigation";
 
-const UploadDropZone = () => {
+const UploadDropZone = ({
+  isSubscribed,
+}: {
+  isSubscribed: boolean
+}) => {
   const router = useRouter()
   const [isUploading, setIsUploading] = useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   const { toast } = useToast()
 
-  const { startUpload } =  useUploadThing("pdfUploader")
+  const { startUpload } =  useUploadThing(
+    isSubscribed ? 'proPlanUploader' : 'freePlanUploader'
+  )
 
   const { mutate: startPolling } = trpc.getFile.useMutation({
     onSuccess: (file) => {
@@ -97,14 +103,14 @@ const UploadDropZone = () => {
                   Click to upload
                   <span className="font-semibold"> or drag and drop</span>
                 </p>
-                <p className="text-xs text-zinc-500">PDF (up to 4MB)</p>
+                <p className="text-xs text-zinc-500">PDF (up to {isSubscribed ? "16MB" : "4MB" })</p>
               </div>
 
               {acceptedFiles && acceptedFiles[0] ? (
                 <div className="max-w-xs bg-white flex items-center rounded-md overflow-hidden outline-[1px] outline-zinc-200 divide-x divide-zinc-200">
                   {/* preview of file */}
                   <div className="px-3 py-2 h-full grid place-items-center">
-                    <File className="h-4 w04 text-blue-500" />
+                    <File className="h-4 w04 text-green-500" />
                   </div>
                   <div className="px-3 py-2 h-full text-sm truncate">
                     {acceptedFiles[0].name}
@@ -146,7 +152,11 @@ const UploadDropZone = () => {
   );
 };
 
-const UploadButton = () => {
+const UploadButton = ({
+  isSubscribed,
+}: {
+  isSubscribed: boolean
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -162,7 +172,7 @@ const UploadButton = () => {
         <Button>Upload PDF</Button>
       </DialogTrigger>
       <DialogContent>
-        <UploadDropZone />
+        <UploadDropZone isSubscribed={isSubscribed}/>
       </DialogContent>
     </Dialog>
   );

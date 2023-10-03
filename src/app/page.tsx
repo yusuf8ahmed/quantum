@@ -14,13 +14,11 @@ export default function Home() {
           </p>
         </div>
         <h1 className="max-w-4xl text-5xl font-bold md: text-6xl lg:text-7xl">
-          Analyze SEC <span className="text-blue-500"> filings </span> in
-          seconds
+          Start Chatting with your <span className="text-green-500">PDF&apos;s</span> in seconds
         </h1>
         <p className="mt-5 max-w-prose text-zinc-700 sm:text-lg">
-          Quantum allows you to have conversations with any SEC filing. Simply
-          upload select a company and a filing and start asking questions right
-          away
+          Quantum allows you to have conversations with any PDF. Simply
+          upload a PDF and start asking questions right away
         </p>
         <Link
           className={buttonVariants({
@@ -58,7 +56,7 @@ export default function Home() {
               <div className="mt-16 flow-root sm:mt-24">
                 <div className="m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                   <Image
-                    src="/dashboard-preview.jpg"
+                    src="/dashboard-preview.png"
                     alt="preview of dashboard"
                     width={1364}
                     height={866}
@@ -92,10 +90,11 @@ export default function Home() {
         <div className="mb-12 px-6 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
             <h2 className="mt-2 font-bold text-4xl text-gray-900 sm:text-5xl">
-              Start Analyzing in minutes
+              Start Chatting in seconds
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Analyzing SEC filing has never been easier than with Quantum
+              
+              Analyzing documents has never been easier than with Quantum
             </p>
           </div>
         </div>
@@ -105,7 +104,7 @@ export default function Home() {
           {/* step 1 */}
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-1-4 border-zinc-300 py-2 pl-4 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-blue-600">Step 1</span>
+              <span className="text-sm font-medium text-green-600">Step 1</span>
               <span className="text-xl font-semibold">
                 Sign up for an account
               </span>
@@ -113,7 +112,7 @@ export default function Home() {
                 Either starting out with a free plan or choose our{" "}
                 <Link
                   href="/pricing"
-                  className="text-blue-700 underline underline-offset-2"
+                  className="text-green-700 underline underline-offset-2"
                 >
                   pro plan
                 </Link>
@@ -124,9 +123,9 @@ export default function Home() {
           {/* step 2 */}
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-1-4 border-zinc-300 py-2 pl-4 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-blue-600">Step 2</span>
+              <span className="text-sm font-medium text-green-600">Step 2</span>
               <span className="text-xl font-semibold">
-                Select an SEC filing (or upload it)
+                Select an Documents
               </span>
               <span className="mt-2 text-zinc-700">
                 We&apos;ll process your filing and make it ready for you to chat
@@ -137,7 +136,7 @@ export default function Home() {
           {/* step 3 */}
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-1-4 border-zinc-300 py-2 pl-4 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-blue-600">Step 3</span>
+              <span className="text-sm font-medium text-green-600">Step 3</span>
               <span className="text-xl font-semibold">
                 Start asking questions
               </span>
@@ -153,7 +152,7 @@ export default function Home() {
               <div className="mt-16 flow-root sm:mt-24">
                 <div className="m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                   <Image
-                    src="/file-upload-preview.jpg"
+                    src="/file-upload-preview.png"
                     alt="file upload preview"
                     width={1419}
                     height={732}
