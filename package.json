@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    
+    "postinstall": "prisma generate",
     "analyze": "ANALYZE=true next build",
     "kill": "kill -9 $(lsof -ti:3000)",
     "studio": "npx prisma studio",
