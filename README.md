@@ -1,0 +1,3 @@
+- https://ui.shadcn.com/docs/components/tooltip 
+- https://uploadthing.com/dashboard 
+- http://localhost:5555
