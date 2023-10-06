@@ -23,7 +23,7 @@ interface PricingItemsType {
   plan: string;
   tagline: string;
   cost: string;
-  quota: string;
+  quota: string | number;
   features: FeaturesType[];
 }
 
