@@ -14,7 +14,7 @@ export default function Home() {
           </p>
         </div>
         <h1 className="max-w-4xl text-5xl font-bold md: text-6xl lg:text-7xl">
-          Analyze SEC <span className="text-blue-500"> filings </span> in
+          Analyze SEC <span className="text-green-500"> filings </span> in
           seconds
         </h1>
         <p className="mt-5 max-w-prose text-zinc-700 sm:text-lg">
@@ -105,7 +105,7 @@ export default function Home() {
           {/* step 1 */}
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-1-4 border-zinc-300 py-2 pl-4 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-blue-600">Step 1</span>
+              <span className="text-sm font-medium text-green-600">Step 1</span>
               <span className="text-xl font-semibold">
                 Sign up for an account
               </span>
@@ -113,7 +113,7 @@ export default function Home() {
                 Either starting out with a free plan or choose our{" "}
                 <Link
                   href="/pricing"
-                  className="text-blue-700 underline underline-offset-2"
+                  className="text-green-700 underline underline-offset-2"
                 >
                   pro plan
                 </Link>
@@ -124,7 +124,7 @@ export default function Home() {
           {/* step 2 */}
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-1-4 border-zinc-300 py-2 pl-4 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-blue-600">Step 2</span>
+              <span className="text-sm font-medium text-green-600">Step 2</span>
               <span className="text-xl font-semibold">
                 Select an SEC filing (or upload it)
               </span>
@@ -137,7 +137,7 @@ export default function Home() {
           {/* step 3 */}
           <li className="md:flex-1">
             <div className="flex flex-col space-y-2 border-1-4 border-zinc-300 py-2 pl-4 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
-              <span className="text-sm font-medium text-blue-600">Step 3</span>
+              <span className="text-sm font-medium text-green-600">Step 3</span>
               <span className="text-xl font-semibold">
                 Start asking questions
               </span>

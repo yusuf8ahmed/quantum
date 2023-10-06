@@ -52,7 +52,7 @@ const Dashboard = ({subscriptionPlan}: PageProps) => {
                 className="flex flex-col gap-2"
               >
                 <div className="pt-6 px-6 flex w-full item-center justify-between space-x-6">
-                  <div className="h-10 w-10 flex-shrink-0 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"/>
+                  <div className="h-10 w-10 flex-shrink-0 rounded-full bg-gradient-to-r from-cyan-500 to-green-500"/>
                   <div className="flex-1 truncate">
                     <div className="flex items-center space-x-3">
                       <h3 className="truncate text-lg font-medium text-zinc-900">{file.name}</h3>
