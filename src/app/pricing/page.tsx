@@ -21,7 +21,8 @@ const Page = () => {
     {
       plan: "Free",
       tagline: "For small side projects.",
-      quota: 10,
+      cost: "0",
+      quota: 1,
       features: [
         {
           text: "5 pages per PDF",
@@ -48,6 +49,7 @@ const Page = () => {
     {
       plan: "Pro",
       tagline: "For larger projects with higher needs.",
+      cost: "9",
       quota: PLANS.find((p) => p.slug === "pro")!.quota,
       features: [
         {
@@ -70,11 +72,37 @@ const Page = () => {
         },
       ],
     },
+    {
+      plan: "Enterprise",
+      tagline: "For larger projects with higher needs.",
+      cost: "X",
+      quota: "∞",
+      features: [
+        {
+          text: "Everything in Pro Plan",
+        },
+        {
+          text: "Commercial use of API",
+        },
+        {
+          text: "$0.05 per upload via API"
+        },
+        {
+          text: "$0.13 per message with GPT-3.5 via API"
+        },
+        {
+          text: "$0.24 per message with GPT-4 via API",
+        },
+        {
+          text: "Priority support via live call",
+        },
+      ],
+    },
   ];
 
   return (
     <>
-      <MaxWidthWrapper className="mb-8 mt-24 text-center max-w-5xl">
+      <MaxWidthWrapper className="mb-8 mt-24 text-center max-w-6xl">
         <div className="mx-auto mb-10 sm:max-w-lg">
           <h1 className="text-6xl font-bold sm:text-7xl">Pricing</h1>
           <p className="mt-5 text-gray-600 sm:text-lg">
@@ -83,12 +111,12 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="pt-12 grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <div className="mt-15 grid grid-cols-1 gap-5 lg:grid-cols-3">
           <TooltipProvider>
-            {pricingItems.map(({ plan, tagline, quota, features }) => {
+            {pricingItems.map(({ plan, cost, tagline, quota, features }) => {
               const price =
                 PLANS.find((p) => p.slug === plan.toLowerCase())?.price
-                  .amount || 0;
+                  .amount || cost;
 
               return (
                 <div
