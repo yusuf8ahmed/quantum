@@ -13,16 +13,30 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { ArrowRight, Check, HelpCircle, Minus } from "lucide-react";
 import Link from "next/link";
 
+interface FeaturesType {
+  text: string;
+  footnote?: string;
+  negative?: boolean;
+}
+
+interface PricingItemsType {
+  plan: string;
+  tagline: string;
+  cost: string;
+  quota: string;
+  features: FeaturesType[];
+}
+
 const Page = () => {
   const { getUser } = getKindeServerSession();
   const user = getUser();
 
-  const pricingItems = [
+  const pricingItems: PricingItemsType[] = [
     {
       plan: "Free",
       tagline: "For small side projects.",
       cost: "0",
-      quota: 1,
+      quota: "1",
       features: [
         {
           text: "5 pages per PDF",
@@ -85,10 +99,10 @@ const Page = () => {
           text: "Commercial use of API",
         },
         {
-          text: "$0.05 per upload via API"
+          text: "$0.05 per upload via API",
         },
         {
-          text: "$0.13 per message with GPT-3.5 via API"
+          text: "$0.13 per message with GPT-3.5 via API",
         },
         {
           text: "$0.24 per message with GPT-4 via API",
